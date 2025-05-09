@@ -77,8 +77,8 @@ export function SolucionesSection() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
                 <div className="rounded-xl overflow-hidden shadow-md">
-                    <Image src="/img/softwarehospital.png" alt="Hospital Gea" width="120"
-                     height="120" className="w-full h-64 object-cover" />
+                    <Image src="/img/softwarehospital.png" alt="Hospital Gea" width="1200"
+                     height="1200" className="w-full h-64 object-cover" />
                     <div className="p-4 text-left">
                     <h3 className="text-sm font-medium text-gray-800">Instalación de Software / Hospital Gea</h3>
                     <p className="text-xs text-gray-500">Jan 23, 2025</p>
@@ -86,8 +86,8 @@ export function SolucionesSection() {
                 </div>
 
                 <div className="rounded-xl overflow-hidden shadow-md">
-                    <Image src="/img/instalacionventiladores.png" alt="Ventiladores Mecánicos" width="120"
-                     height="120" className="w-full h-64 object-cover" />
+                    <Image src="/img/instalacionventiladores.png" alt="Ventiladores Mecánicos" width="1200"
+                     height="1200" className="w-full h-64 object-cover" />
                     <div className="p-4 text-left">
                     <h3 className="text-sm font-medium text-gray-800">Intalación de 500 Ventiladores Mecánicos</h3>
                     <p className="text-xs text-gray-500">Jun 7, 2022</p>
@@ -95,8 +95,8 @@ export function SolucionesSection() {
                 </div>
 
                 <div className="rounded-xl overflow-hidden shadow-md">
-                    <Image src="/img/interoperabilidad.png" alt="inter" width="120"
-                        height="120" className="w-full h-64 object-cover" />
+                    <Image src="/img/interoperabilidad.png" alt="inter" width="1200"
+                        height="1200" className="w-full h-64 object-cover" />
                     <div className="p-4 text-left">
                     <h3 className="text-sm font-medium text-gray-800">Interoperabilidad de sistemas/Dydetec</h3>
                     <p className="text-xs text-gray-500">Jun 6, 2023</p>
@@ -104,8 +104,8 @@ export function SolucionesSection() {
                 </div>
 
                 <div className="rounded-xl overflow-hidden shadow-md">
-                    <Image src="/img/instalacioncableado.png" alt="inss" width="120"
-                    height="120" className="w-full h-64 object-cover" />
+                    <Image src="/img/instalacioncableado.png" alt="inss" width="1200"
+                    height="1200" className="w-full h-64 object-cover" />
                     <div className="p-4 text-left">
                     <h3 className="text-sm font-medium text-gray-800">Intalaciones de cableado/Gätsimed</h3>
                     <p className="text-xs text-gray-500">Dec 27, 2020</p>

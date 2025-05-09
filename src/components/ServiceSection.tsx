@@ -161,8 +161,8 @@ export function ServiceSection() {
 
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-center items-stretch gap-8 px-4">
                 <div className="group bg-white rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 w-full md:w-1/3 shadow-lg">
-                <Image src="/img/asesoriascapacitaciones.png" alt="Asesorías" width="120"
-            height="120" className="h-64 w-full object-cover" />
+                <Image src="/img/asesoriascapacitaciones.png" alt="Asesorías" width="1200"
+            height="1200" className="h-64 w-full object-cover" />
                 <div className="bg-blue-700 text-white p-6 h-full text-left">
                     <h3 className="text-xl font-semibold mb-2">Asesorías y capacitaciones</h3>
                     <p className="mb-4 text-sm">Dónde la experiencia técnica se convierte en tu ventaja.</p>
@@ -173,8 +173,8 @@ export function ServiceSection() {
                 </div>
 
                 <div className="group bg-white rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 w-full md:w-1/3 shadow-lg">
-                <Image src="/img/hiperconectividadyservicios.png" alt="Hiperconectividad" width="120"
-            height="120" className="h-64 w-full object-cover" />
+                <Image src="/img/hiperconectividadyservicios.png" alt="Hiperconectividad" width="1200"
+            height="1200" className="h-64 w-full object-cover" />
                 <div className="bg-yellow-400 text-black p-6 h-full text-left">
                     <h3 className="text-xl font-semibold mb-2">Hiperconectividad y servicios personalizados</h3>
                     <p className="mb-4 text-sm">Formamos equipo que construye el futuro: capacitación especializada en infraestructura.</p>
@@ -185,7 +185,7 @@ export function ServiceSection() {
                 </div>
 
                 <div className="group bg-white rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-105 w-full md:w-1/3 shadow-lg">
-                <Image src="/img/instalaciones2.png" alt="Instalaciones" width={0} height={0} className="h-64 w-full object-cover" />
+                <Image src="/img/instalaciones2.png" alt="Instalaciones" width={1200} height={1200} className="h-64 w-full object-cover" />
                 <div className="bg-red-500 text-white p-6 h-full text-left">
                     <h3 className="text-xl font-semibold mb-2">Instalaciones</h3>
                     <p className="mb-4 text-sm">Impulsando tu infraestructura con conocimiento: asesoría y capacitación que transforma.</p>
