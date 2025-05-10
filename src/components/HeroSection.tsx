@@ -478,6 +478,8 @@ export function HeroSection() {
 
     <div className="flex flex-wrap justify-center items-center gap-8 max-w-5xl mx-auto">
       <Image src="/img/gatsimed.png" alt="Gatsimed" width={120} height={120} className="h-12 object-contain grayscale hover:grayscale-0 transition" />
+      <Image src="/img/tae.png" alt="Tae" width={120} height={120} className="h-12 object-contain grayscale hover:grayscale-0 transition" />
+
       <Image src="/img/dydetec.png" alt="DyDetec" width={120} height={120} className="h-20 object-contain grayscale hover:grayscale-0 transition" />
       <Image src="/img/logo-gea.png" alt="Hospital General" width={120} height={200} className="h-20 object-contain grayscale hover:grayscale-0 transition" />
       <Image src="/img/logo-cofepris.png" alt="Cofepris" width={200} height={200} className="h-12 object-contain grayscale hover:grayscale-0 transition" />
