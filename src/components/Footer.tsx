@@ -19,7 +19,7 @@ export function Footer() {
           <Image
             src="/logo-08.png"
             alt="Logo Tech Konecta blanco con iconos tecnológicos"
-            className="w-40 h-auto mb-1"
+            className="w-40 h-auto mb-1 grayscale hover:grayscale-0 transition"
             width="120"
             height="120"
           />
