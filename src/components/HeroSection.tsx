@@ -252,128 +252,166 @@ export function HeroSection() {
     </section>
 
 
-      <section id='informes' className="bg-black text-white py-20 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-5xl font-light leading-snug">
-            Conectamos tu negocio con soluciones digitales <span className="font-semibold text-cyan-400">escalables, seguras y automatizadas</span> para que todo funcione en <span className="italic">armonía</span>.
-          </h2>
-        </motion.div>
+    <section id='informes' className="bg-black text-white py-20 px-4">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    viewport={{ once: true }}
+    className="text-center mb-12"
+  >
+    <h2 className="text-3xl md:text-5xl font-light leading-snug">
+      Conectamos tu negocio con soluciones digitales <span className="font-semibold text-cyan-400">escalables, seguras y automatizadas</span> para que todo funcione en <span className="italic">armonía</span>.
+    </h2>
+    <p className="text-white/70 mt-4 text-lg max-w-3xl mx-auto">
+      Desde la planeación arquitectónica hasta la supervisión operativa, te acompañamos en cada paso de tu transformación tecnológica.
+    </p>
+  </motion.div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
-          >
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/img/diseñoarquitectura.png"
-                alt="Diseño y Arquitectura Escalable"
-                width={600}
-                height={400}
-                className="transition delay-150 duration-700 ease-in-out hover:-translate-y-1 hover:scale-110"
-              />
-            </div>
-            <h3 className="text-xl font-bold mt-6">Diseño y Arquitectura Escalable</h3>
-            <p className="text-white/80 mt-2 max-w-md">
-              ✔ Planificación alineada a tu crecimiento<br />
-              ✔ Infraestructura modular y optimizable
-            </p>
-          </motion.div>
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-4">
+    {/* Tarjeta 1 */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
+    >
+      <div className="rounded-xl overflow-hidden shadow-lg">
+        <Image
+          src="/img/diseñoarquitectura.png"
+          alt="Diseño y Arquitectura Escalable"
+          width={600}
+          height={400}
+          className="transition duration-700 hover:scale-110"
+        />
+      </div>
+      <h3 className="text-xl font-bold mt-6">Diseño y Arquitectura Escalable</h3>
+      <p className="text-white/80 mt-2 max-w-sm">
+        ✔ Planificación centrada en el crecimiento<br />
+        ✔ Infraestructura modular y optimizable<br />
+        ✔ Alineación estratégica con tus objetivos
+      </p>
+    </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
-          >
-            <div className="group rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/img/implementacion.png"
-                alt="Implementación robusta y segura"
-                width={600}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-bold mt-6">Implementación robusta y segura</h3>
-            <p className="text-white/80 mt-2 max-w-md">
-              ✔ Ciberseguridad desde el núcleo<br />
-              ✔ Despliegues sin interrupciones
-            </p>
-          </motion.div>
-        </div>
+    {/* Tarjeta 2 */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
+    >
+      <div className="rounded-xl overflow-hidden shadow-lg">
+        <Image
+          src="/img/implementacion.png"
+          alt="Implementación robusta y segura"
+          width={600}
+          height={400}
+          className="transition duration-700 hover:scale-110"
+        />
+      </div>
+      <h3 className="text-xl font-bold mt-6">Implementación Robustecida y Segura</h3>
+      <p className="text-white/80 mt-2 max-w-sm">
+        ✔ Ciberseguridad desde el diseño<br />
+        ✔ Despliegue sin interrupciones<br />
+        ✔ Protocolos de respaldo y contingencia
+      </p>
+    </motion.div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4 mt-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
-          >
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/img/gestion.png"
-                alt="Gestión proactiva"
-                width={600}
-                height={400}
-                className="transition delay-150 duration-700 ease-in-out hover:-translate-y-1 hover:scale-110"
-              />
-            </div>
-            <h3 className="text-xl font-bold mt-6">Gestión proactiva 24/7</h3>
-            <p className="text-white/80 mt-2 max-w-md">
-              ✔ Soporte inmediato y especializado<br />
-              ✔ Prevención antes que reacción
-            </p>
-          </motion.div>
+    {/* Tarjeta 3 */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
+    >
+      <div className="rounded-xl overflow-hidden shadow-lg">
+        <Image
+          src="/img/gestion.png"
+          alt="Gestión proactiva 24/7"
+          width={600}
+          height={400}
+          className="transition duration-700 hover:scale-110"
+        />
+      </div>
+      <h3 className="text-xl font-bold mt-6">Gestión Proactiva 24/7</h3>
+      <p className="text-white/80 mt-2 max-w-sm">
+        ✔ Monitoreo continuo de rendimiento<br />
+        ✔ Resolución anticipada de incidentes<br />
+        ✔ Asistencia inmediata y humana
+      </p>
+    </motion.div>
+  </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
-          >
-            <div className="group rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src="/img/automatizacion.png"
-                alt="Automatización de procesos TI"
-                width={600}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-bold mt-6">Automatización de procesos TI</h3>
-            <p className="text-white/80 mt-2 max-w-md">
-              ✔ Flujos inteligentes sin intervención manual<br />
-              ✔ Menor error humano, mayor productividad
-            </p>
-          </motion.div>
-        </div>
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-4 mt-16">
+    {/* Tarjeta 4 */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
+    >
+      <div className="rounded-xl overflow-hidden shadow-lg">
+        <Image
+          src="/img/automatizacion.png"
+          alt="Automatización de procesos TI"
+          width={600}
+          height={400}
+          className="transition duration-700 hover:scale-110"
+        />
+      </div>
+      <h3 className="text-xl font-bold mt-6">Automatización de Procesos TI</h3>
+      <p className="text-white/80 mt-2 max-w-sm">
+        ✔ Eliminación de tareas repetitivas<br />
+        ✔ Mayor eficiencia operativa<br />
+        ✔ Escenarios automatizados a medida
+      </p>
+    </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-xl mb-4">¿Listo para transformar tu ecosistema digital?</p>
-          <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg transition duration-300">
-            Solicita tu diagnóstico gratuito
-          </button>
-        </motion.div>
-      </section>
+    {/* Tarjeta 5 nueva */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      viewport={{ once: true }}
+      className="flex flex-col items-center text-center hover:scale-105 transition-transform duration-500"
+    >
+      <div className="rounded-xl overflow-hidden shadow-lg">
+        <Image
+          src="/img/integracion.png"
+          alt="Integración total de sistemas"
+          width={600}
+          height={400}
+          className="transition duration-700 hover:scale-110"
+        />
+      </div>
+      <h3 className="text-xl font-bold mt-6">Integración Total de Sistemas</h3>
+      <p className="text-white/80 mt-2 max-w-sm">
+        ✔ Conectividad entre plataformas<br />
+        ✔ Sincronización de datos en tiempo real<br />
+        ✔ Compatibilidad con infraestructura existente
+      </p>
+    </motion.div>
+  </div>
+
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.4 }}
+    viewport={{ once: true }}
+    className="text-center mt-20"
+  >
+    <p className="text-xl mb-2 italic text-white/80">Creamos entornos tecnológicos que simplemente funcionan.</p>
+    <p className="text-xl mb-6">¿Listo para transformar tu ecosistema digital?</p>
+    <button className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg transition duration-300">
+      Solicita tu diagnóstico gratuito
+    </button>
+  </motion.div>
+</section>
+
 
 
 
@@ -406,7 +444,7 @@ export function HeroSection() {
               </li>
             </ul>
 
-            <button className="mt-2 px-6 py-3 bg-[#0077BE] text-white font-semibold rounded-xl hover:bg-[#005f9e] transition duration-300">
+            <button className="mt-2 px-6 py-3 bg-black text-white font-semibold rounded-xl hover:bg-[#005f9e] transition duration-300">
               Solicita tu instalación
             </button>
           </div>
@@ -510,7 +548,9 @@ export function HeroSection() {
       <details className="p-4">
         <summary className="font-semibold cursor-pointer">¿Qué es Tech Konecta Mx?</summary>
         <p className="mt-2 text-gray-700">
-          En Tech Konecta Mx nos encargamos de dar el servicio de más alta calidad para las instalaciones tecnológicas y amplificar los negocios.
+        Somos una empresa mexicana dedicada a la distribución, instalación y mantenimiento de soluciones tecnológicas integrales 
+        en telecomunicaciones, redes, seguridad electrónica y energía. Trabajamos con marcas líderes y somos distribuidor autorizado, 
+        garantizando calidad, respaldo técnico y disponibilidad inmediata de equipos y accesorios.
         </p>
       </details>
 
