@@ -51,7 +51,6 @@ export default function Contacto() {
   return (
     <section id="contacto" className="w-full bg-white py-20 px-4">
       <div className="max-w-3xl mx-auto text-center">
-        {/* ... formulario y beneficios ... */}
 
         <div className="mt-16">
           <h3 className="text-2xl font-semibold text-[#07172E] mb-6">Lo que opinan nuestros clientes</h3>
@@ -228,7 +227,6 @@ export function HeroSection() {
         className="h-[2px] w-24 bg-yellow-400 origin-left"
       />
 
-      {/* Iconos con valores o diferenciadores */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -417,7 +415,6 @@ export function HeroSection() {
 
       <section id='nosotros' className="w-full bg-white">
       <div className="max-w-8xl mx-auto flex flex-col gap-0 md:grid md:grid-cols-2">
-        {/* Bloque 1: Texto + Imagen */}
         <div className="bg-gradient-to-b from-[#C2E4FF] to-[#0077BE] flex flex-col items-center justify-center p-6 md:p-12 text-center md:text-left animate-fade-in relative">
           <div className="bg-gradient-to-b from-transparent to-[#0077BE] absolute inset-0 z-0"></div>
           <div className="relative z-10">
@@ -460,7 +457,6 @@ export function HeroSection() {
             />
           </div>
 
-          {/* Bloque 2: Imagen + Texto (invertido en móvil) */}
           <div className="order-2 md:order-none animate-fade-in">
             <Image
               src="/img/hiperconectividad.png"
@@ -509,7 +505,6 @@ export function HeroSection() {
 
 
       <section className="bg-white w-full px-4 py-16">
-  {/* Presencia de marcas */}
   <div className="text-center mb-16">
     <h2 className="text-3xl font-bold text-[#07172E] mb-2">Presencia con:</h2>
     <p className="text-gray-600 mb-8">Organizaciones que confían en nuestra tecnología</p>
@@ -524,7 +519,6 @@ export function HeroSection() {
     </div>
   </div>
 
-  {/* Estadísticas */}
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-[#07172E] mb-16">
     <div>
       <h3 className="text-4xl font-bold">+10</h3>
@@ -540,7 +534,6 @@ export function HeroSection() {
     </div>
   </div>
 
-  {/* Preguntas frecuentes */}
   <div className="text-black text-center">
     <h2 className="text-3xl font-bold text-[#07172E] mb-8">Preguntas Frecuentes</h2>
 
@@ -569,7 +562,6 @@ export function HeroSection() {
       </details>
     </div>
 
-    {/* CTA adicional */}
     <div className="text-center mt-12">
       <p className="text-gray-700 text-lg mb-4">¿Tienes más dudas o necesitas atención personalizada?</p>
       <Link href="#contacto">

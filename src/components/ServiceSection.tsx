@@ -104,46 +104,9 @@ export function ServiceSection() {
         },
       ]
 
-    const getTitulo = (index: number) => [
-        "VideoVigilancia",
-        "Cableado Estructurado",
-        "Control de Acceso",
-        "Redes y Tecnologías de la Información",
-        "IoT / GPS y Telemática y Señalización Audiovisual"
-      ][index]
+
       
-      const getTexto = (index: number) => [
-        "Protege lo que más importa con vigilancia IP inteligente, visión nocturna avanzada y monitoreo en tiempo real desde cualquier dispositivo.",
-        "Conecta cada rincón de tu empresa con cableado certificado y preparado para el futuro: rendimiento estable, orden y expansión garantizados.",
-        "Accede con huella, tarjeta o rostro. Nuestra tecnología de acceso combina seguridad y trazabilidad en entornos de alta demanda.",
-        "Maximizamos tu conectividad: redes LAN, WiFi y servidores optimizados para mantener tu operación fluida y protegida contra amenazas.",
-        "Integración total entre sensores, GPS, pantallas LED y plataformas digitales para transformar datos en decisiones inmediatas."
-      ][index]
-      
-      
-      const getImg = (index: number) => [
-        "/img/videovigilancia.png",
-        "/img/cableadoestructurado.png",
-        "/img/controlacceso.png",
-        "/img/redestecnologiasti.png",
-        "/img/lot.png"
-      ][index]
-      
-      const getAlt = (index: number) => [
-        "VideoVigilancia",
-        "Cableado Estructurado",
-        "Control de Acceso",
-        "Redes TI",
-        "IoT GPS"
-      ][index]
-      
-      const getColor = (index: number) => [
-        "text-yellow-400",
-        "text-blue-600",
-        "text-red-600",
-        "text-yellow-600",
-        "text-blue-400"
-      ][index]
+
       
   
   return (
