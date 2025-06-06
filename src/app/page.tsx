@@ -1,8 +1,11 @@
 // src/app/page.tsx
 'use client'
-import './globals.css'
+
 
 import { redirect } from 'next/navigation'
+import './globals.css'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function HomeRedirect() {
   redirect('/Inicio')

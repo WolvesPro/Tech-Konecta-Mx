@@ -108,103 +108,97 @@ export function HeroSection() {
   
   return (
     <>
-      <section className="relative w-full h-[70vh] overflow-hidden text-white pt-[80px]">
-      {isClient && (
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        >
-          <source src="/videos/background.mov" type="video/mp4" />
-          Tu navegador no soporta videos en HTML5.
-        </video>
-      )}
+<section className="relative w-full h-[70vh] overflow-hidden text-white pt-[80px] font-montserrat">
+  {isClient && (
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    >
+      <source src="/videos/background.mov" type="video/mp4" />
+      Tu navegador no soporta videos en HTML5.
+    </video>
+  )}
 
-      <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+  {/* Capa oscura sobre video */}
+  <div className="absolute inset-0 bg-black bg-opacity-50 z-10" />
 
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl md:text-7xl font-extrabold"
-        >
-          <span className="text-white">Tec</span>
-          <span className="text-blue-600">h</span>
-          <span className="text-yellow-400"> K</span>
-          <span className="text-white">onecta</span>
-          <span className="text-yellow-400"> Mx</span>
-        </motion.h1>
+  {/* Contenido */}
+  <div className="relative z-20 flex flex-col items-center justify-center h-full text-center px-4">
+    <motion.h1
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="text-5xl md:text-7xl font-extrabold font-ibm"
+    >
+      <span className="text-white">Tec</span>
+      <span className="text-konecta-blue">h</span>
+      <span className="text-konecta-yellow"> K</span>
+      <span className="text-white">onecta</span>
+      <span className="text-konecta-yellow"> Mx</span>
+    </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 1 }}
-          className="mt-4 text-lg md:text-xl text-blue-100 italic max-w-xl"
-        >
-          Tecnología inteligente para instituciones que requieren precisión y confiabilidad
-        </motion.p>
+    <motion.p
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.6, duration: 1 }}
+      className="mt-6 text-xl md:text-2xl max-w-3xl font-light text-konecta-blueLight"
+    >
+      “Conectamos tecnología, instalamos confianza”
+    </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 1 }}
-          className="mt-6 text-xl md:text-2xl max-w-3xl"
-        >
-          Establecemos conexiones integrales entre personas, sistemas y negocios
-        </motion.p>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1, duration: 1 }}
+      className="mt-10 flex gap-4 flex-wrap justify-center"
+    >
+      <Link href="#contacto">
+        <button className="bg-konecta-blue hover:bg-konecta-blueDark text-white font-semibold px-6 py-3 rounded-full transition">
+          Contáctanos
+        </button>
+      </Link>
+      <Link href="#nosotros">
+        <button className="bg-white bg-opacity-20 border border-white text-white px-6 py-3 rounded-full hover:bg-opacity-30 transition">
+          Conócenos
+        </button>
+      </Link>
+    </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="mt-10 flex gap-4 flex-wrap justify-center"
-        >
-          <Link href="#contacto">
-            <button className="bg-white text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-200 transition">
-              Contáctanos
-            </button>
-          </Link>
-          <Link href="#nosotros">
-            <button className="bg-white bg-opacity-20 border border-white text-white px-6 py-3 rounded-full hover:bg-opacity-30 transition">
-              Conócenos
-            </button>
-          </Link>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.3, duration: 1 }}
-          className="mt-8 flex gap-6 flex-wrap justify-center items-center"
-        >
-          <div className="flex items-center space-x-2">
-            <ShieldCheck className="text-green-400 w-6 h-6" />
-            <span className="text-sm text-white">Certificaciones</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Cpu className="text-blue-400 w-6 h-6" />
-            <span className="text-sm text-white">Infraestructura de alto rendimiento</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Users className="text-yellow-300 w-6 h-6" />
-            <span className="text-sm text-white">Clientes en sector salud y gubernamental</span>
-          </div>
-        </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 1.3, duration: 1 }}
+      className="mt-8 flex gap-6 flex-wrap justify-center items-center"
+    >
+      <div className="flex items-center space-x-2">
+        <ShieldCheck className="text-konecta-green w-6 h-6" />
+        <span className="text-sm text-white">Certificaciones</span>
       </div>
-
-      <div className="absolute bottom-8 animate-bounce z-20">
-        <Link href="#informes">
-          <ChevronDown className="w-8 h-8 text-white opacity-70" />
-        </Link>
+      <div className="flex items-center space-x-2">
+        <Cpu className="text-konecta-blue w-6 h-6" />
+        <span className="text-sm text-white">Infraestructura de alto rendimiento</span>
       </div>
-
-      <div className="absolute bottom-0 w-full bg-black bg-opacity-0 py-2 text-sm text-center text-white z-10">
-        +10 instituciones ya confiaron en Tech Konecta Mx para transformar su tecnología
+      <div className="flex items-center space-x-2">
+        <Users className="text-konecta-yellow w-6 h-6" />
+        <span className="text-sm text-white">Clientes en sector salud y gubernamental</span>
       </div>
-    </section>
+    </motion.div>
+  </div>
+
+  <div className="absolute bottom-8 animate-bounce z-20">
+    <Link href="#informes">
+      <ChevronDown className="w-8 h-8 text-white opacity-70" />
+    </Link>
+  </div>
+
+  <div className="absolute bottom-0 w-full bg-black bg-opacity-0 py-2 text-sm text-center text-konecta-blueLight z-10">
+    +10 instituciones ya confiaron en Tech Konecta Mx para transformar su tecnología
+  </div>
+</section>
+
 
     <section className="w-full bg-gradient-to-b from-black via-[#001f3f] to-blue-700 py-24 px-4 flex flex-col justify-center items-center text-center space-y-10">
       <motion.p
