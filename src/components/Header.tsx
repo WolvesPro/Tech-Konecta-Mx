@@ -41,7 +41,7 @@ export function Header() {
           <nav className="hidden md:flex space-x-6 text-sm font-semibold">
             <a href="/Inicio" className={linkClass('/Inicio')}>Nosotros</a>
             <a href="/Servicios" className={linkClass('/Servicios')}>Servicios</a>
-            <a href="/Soluciones" className={linkClass('/Soluciones')}>Casos de éxito</a>
+            <a href="/CasosDeExito" className={linkClass('/CasosDeExito')}>Casos de éxito</a>
             <a href="/Contacto" className={linkClass('/Contacto')}>Contacto</a>
           </nav>
         </div>
@@ -86,7 +86,7 @@ export function Header() {
           <nav className="flex flex-col space-y-4 text-sm font-semibold">
             <a href="/Inicio" className={linkClass('/Inicio')}>Nosotros</a>
             <a href="/Servicios" className={linkClass('/Servicios')}>Servicios</a>
-            <a href="/Soluciones" className={linkClass('/Casos')}>Casos de Éxito</a>
+            <a href="/CasosDeExito" className={linkClass('/CasosDeExito')}>Casos de Éxito</a>
             <a href="/Inicio" className={linkClass('/Casos')}>Contacto</a>
           </nav>
           <div className="mt-4 flex flex-col space-y-3 text-sm text-gray-700">

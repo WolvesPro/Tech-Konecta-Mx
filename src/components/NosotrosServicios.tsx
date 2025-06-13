@@ -372,7 +372,7 @@ const goTo = (index: number) => setCurrent(index);
           <Image src="/img/tae.png" alt="Tae" width={120} height={120} className="h-12 object-contain  transition" />
     
           <Image src="/img/dydetec.png" alt="DyDetec" width={180} height={180} className="h-20 object-contain  transition" />
-          <Image src="/img/iconos-botones/biossman.png" alt="biossman" width={180} height={128} className="h-20 object-contain transition" />
+          <Image src="/img/iconos/biosman.png" alt="biossman" width={180} height={128} className="h-20 object-contain transition" />
 
           <Image src="/img/logo-gea.png" alt="Hospital General" width={120} height={200} className="h-20 object-contain transition" />
           <Image src="/img/logo-cofepris.png" alt="Cofepris" width={200} height={200} className="h-12 object-contain transition" />

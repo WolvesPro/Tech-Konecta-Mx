@@ -49,61 +49,61 @@ export function ServiceSection() {
       ]
 
       const servicios = [
-  {
-    titulo: "Servicios Profesionales",
-    icono: <Wrench size={24} className="text-blue-600" />,
-    color: "bg-blue-100",
-    imagen: "/img/instalaciones2.png",
-    contenido: [
-      "Redes LAN/WAN: cableado estructurado, fibra, racks",
-      "Videovigilancia: CCTV analógico/IP, cámaras, grabadores",
-      "Redes inalámbricas: WiFi empresarial, enlaces PTP",
-      "Control de acceso y videoporteros",
-      "Sistemas de alarma e intrusión",
-      "Energía solar: paneles, inversores, baterías",
-      "Climatización: minisplits, automatización",
-      "Redes eléctricas: canalización, tierras físicas",
-    ],
-  },
-  {
-    titulo: "Venta y Distribución",
-    icono: <PackageSearch size={24} className="text-yellow-600" />,
-    color: "bg-yellow-100",
-    imagen: "/img/hiperconectividadyservicios.png",
-    contenido: [
-      "Distribuidores autorizados: Cisco, Ubiquiti, Hikvision...",
-      "Cámaras, DVR, NVR, cables coaxiales/UTP",
-      "Herramientas, conectores, abrazaderas",
-      "Routers, switches, puntos de acceso",
-      "Fuentes de poder, supresores, baterías",
-    ],
-  },
-  {
-    titulo: "Accesorios y Adicionales",
-    icono: <Plug size={24} className="text-red-600" />,
-    color: "bg-red-100",
-    imagen: "/img/instalaciones2.png",
-    contenido: [
-      "Gabinetes, racks, organizadores",
-      "Canaletas, tubería, charolas tipo malla",
-      "Cables de red, patchcords, conectores RJ45",
-      "Herrajes, soportes, adaptadores",
-      "Kits de herramientas de instalación",
-    ],
-  },
-  {
-    titulo: "Asesoría y Soporte Técnico",
-    icono: <Headset size={24} className="text-green-600" />,
-    color: "bg-green-100",
-    imagen: "/img/asesoriascapacitaciones.png",
-    contenido: [
-      "Diagnóstico de red y auditoría de CCTV",
-      "Propuestas de mejora y expansión",
-      "Capacitación al personal",
-      "Soporte remoto y presencial",
-    ],
-  },
-];
+      {
+        titulo: "Servicios Profesionales",
+        icono: <Wrench size={24} className="text-blue-600" />,
+        color: "bg-blue-100",
+        imagen: "/img/instalaciones2.png",
+        contenido: [
+          "Redes LAN/WAN: cableado estructurado, fibra, racks",
+          "Videovigilancia: CCTV analógico/IP, cámaras, grabadores",
+          "Redes inalámbricas: WiFi empresarial, enlaces PTP",
+          "Control de acceso y videoporteros",
+          "Sistemas de alarma e intrusión",
+          "Energía solar: paneles, inversores, baterías",
+          "Climatización: minisplits, automatización",
+          "Redes eléctricas: canalización, tierras físicas",
+        ],
+      },
+      {
+        titulo: "Venta y Distribución",
+        icono: <PackageSearch size={24} className="text-yellow-600" />,
+        color: "bg-yellow-100",
+        imagen: "/img/hiperconectividadyservicios.png",
+        contenido: [
+          "Distribuidores autorizados: Cisco, Ubiquiti, Hikvision...",
+          "Cámaras, DVR, NVR, cables coaxiales/UTP",
+          "Herramientas, conectores, abrazaderas",
+          "Routers, switches, puntos de acceso",
+          "Fuentes de poder, supresores, baterías",
+        ],
+      },
+      {
+        titulo: "Accesorios y Adicionales",
+        icono: <Plug size={24} className="text-red-600" />,
+        color: "bg-red-100",
+        imagen: "/img/instalaciones2.png",
+        contenido: [
+          "Gabinetes, racks, organizadores",
+          "Canaletas, tubería, charolas tipo malla",
+          "Cables de red, patchcords, conectores RJ45",
+          "Herrajes, soportes, adaptadores",
+          "Kits de herramientas de instalación",
+        ],
+      },
+      {
+        titulo: "Asesoría y Soporte Técnico",
+        icono: <Headset size={24} className="text-green-600" />,
+        color: "bg-green-100",
+        imagen: "/img/asesoriascapacitaciones.png",
+        contenido: [
+          "Diagnóstico de red y auditoría de CCTV",
+          "Propuestas de mejora y expansión",
+          "Capacitación al personal",
+          "Soporte remoto y presencial",
+        ],
+      },
+    ];
 
 
       
@@ -158,7 +158,7 @@ export function ServiceSection() {
           transition={{ delay: 1, duration: 1 }}
           className="mt-10 flex gap-4 flex-wrap justify-center"
         >
-         <Link href="#contacto">
+         <Link href="/Contacto">
           <button className="bg-green-600 bg-opacity-30 border border-green-400 text-white font-semibold px-6 py-3 rounded-full hover:bg-opacity-100 transition">
             Contáctanos
           </button>
