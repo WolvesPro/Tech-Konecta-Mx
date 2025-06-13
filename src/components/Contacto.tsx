@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
 
-import { ShieldCheck, Cpu, Users, ChevronDown } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 
 
@@ -52,133 +52,213 @@ const sliderSettings = {
 
 export function Contacto() {
 
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [mensaje, setMensaje] = useState("");
+
+  const [form, setForm] = useState({
+    nombre: "",
+    apellido: "",
+    email: "",
+    servicio: "",
+    asunto: "",
+    mensaje: "",
+  });
 
   const [isClient, setIsClient] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [alerta, setAlerta] = useState("");
 
   useEffect(() => {
     setIsClient(true);
   }, []);
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  
-    const data = { nombre, email, mensaje };
-  
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
-  
-    const result = await res.json();
-    alert(result.message || result.error);
-  
-    
-    if (res.ok) {
-      setNombre("");
-      setEmail("");
-      setMensaje("");
+    setLoading(true);
+    setAlerta("");
+
+    if (!form.nombre || !form.email || !form.mensaje) {
+      setAlerta("Por favor llena los campos obligatorios.");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        setAlerta("Mensaje enviado correctamente.");
+        setForm({
+          nombre: "",
+          apellido: "",
+          email: "",
+          servicio: "",
+          asunto: "",
+          mensaje: "",
+        });
+      } else {
+        setAlerta(result.error || "Ocurrió un error.");
+      }
+    } catch (error) {
+      setAlerta("Error al enviar el formulario.");
+    } finally {
+      setLoading(false);
     }
   };
+
+  if (!isClient) return null;
   
   
   return (
     <>
 
- <section className="bg-white w-full px-4 py-16">
- 
-  
-</section>
-
-<section id="contacto" className="w-full bg-white py-20 px-4">
-  <div className="max-w-3xl mx-auto text-center">
-    <h2 className="text-3xl md:text-5xl font-bold text-[#07172E] mb-4">Contacto</h2>
-
-    <p className="text-lg text-gray-700 mb-6">
-      ¿Listo para llevar tu infraestructura tecnológica al siguiente nivel? Nuestro equipo está aquí para ayudarte. Cuéntanos qué necesitas y te responderemos en menos de 24 horas.
-    </p>
-
-    <form
-      onSubmit={handleSubmit}
-      className="bg-white rounded-xl shadow-lg p-8 space-y-6"
+ <section
+      className="relative bg-cover bg-center bg-no-repeat py-16 px-4"
+      style={{ backgroundImage: 'url("img/fondo contacto.png")' }}
     >
-      <div className="flex flex-col md:flex-row gap-4">
-      <input
-        name="nombre"
-        type="text"
-        required
-        placeholder="Nombre"
-        value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
-        className="flex-1 px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+          <div className="text-center py-16">
+          <h2 className="text-4xl font-bold mb-2">Nuestra Ubicación y Horarios</h2>
+          <p className="text-lg text-gray-700">
+            Estamos aquí para servirte en el momento que nos necesites
+          </p>
+        </div>
+      <div className="bg-white/70 rounded-xl shadow-lg p-6 md:p-12 text-black max-w-7xl mx-auto space-y-12">
+    
 
-      <input
-        name="email"
-        type="email"
-        required
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="flex-1 px-4 py-3 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-2xl">Dirección:</h4>
+              <p>
+                María C. MARÍA Ortega Monroy 1,<br />
+                52030 San Pedro Tultepec, Mex,<br />
+                Estado de México
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-2xl">Ventas:</h4>
+              <p>
+                Tel: +55 722 222 2222<br />
+                ventas@techkonectamx.com
+              </p>
+            </div>
+          </div>
 
-      <textarea
-        name="mensaje"
-        rows={5}
-        required
-        placeholder="Escribe tu mensaje o solicitud de cotización aquí..."
-        value={mensaje}
-        onChange={(e) => setMensaje(e.target.value)}
-        className="w-full px-4 py-3 bg-white text-black border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-2xl">Soporte:</h4>
+              <p>
+                Tel: +55 722 222 2222<br />
+                techkonectamx@techkonectamx.com
+              </p>
+            </div>
+           <div>
+            <h4 className="font-semibold text-2xl">Redes Sociales:</h4>
+            <div className="flex gap-4 mt-2 text-xl">
+              <a href="#" className="hover:text-[#53aea0]">
+                <Facebook />
+              </a>
+              <a href="#" className="hover:text-[#53aea0]">
+                <Instagram />
+              </a>
+              <a href="#" className="hover:text-[#53aea0]">
+                <Linkedin />
+              </a>
+            </div>
+          </div>
+          </div>
+        </div>
 
-      <button
-        type="submit"
-        className="w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 rounded-md font-semibold hover:from-blue-700 hover:to-blue-900 transition"
-      >
-        ¡Solicita tu cotización ahora!
-      </button>
-    </form>
+        <div className="grid md:grid-cols-2 gap-12 pt-6">
+          <div>
+            <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="nombre"
+                placeholder="*Nombre"
+                value={form.nombre}
+                onChange={handleChange}
+                required
+                className="bg-[#53aea0]/40 hover:bg-[#53aea0] border-2 border-[#53aea0] text-black placeholder-black px-4 py-2 rounded"
+              />
+              <input
+                type="text"
+                name="apellido"
+                placeholder="*Apellido"
+                value={form.apellido}
+                onChange={handleChange}
+                className="bg-[#53aea0]/40 hover:bg-[#53aea0] border-2 border-[#53aea0] text-black placeholder-black px-4 py-2 rounded"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="*Correo electrónico"
+                value={form.email}
+                onChange={handleChange}
+                required
+                className="bg-[#53aea0]/40 hover:bg-[#53aea0] border-2 border-[#53aea0] text-black placeholder-black px-4 py-2 rounded col-span-2"
+              />
+              <input
+                type="text"
+                name="servicio"
+                placeholder="Servicio de Interés"
+                value={form.servicio}
+                onChange={handleChange}
+                className="bg-[#53aea0]/40 hover:bg-[#53aea0] border-2 border-[#53aea0] text-black placeholder-black px-4 py-2 rounded"
+              />
+              <input
+                type="text"
+                name="asunto"
+                placeholder="Asunto"
+                value={form.asunto}
+                onChange={handleChange}
+                className="bg-[#53aea0]/40 hover:bg-[#53aea0] border-2 border-[#53aea0] text-black placeholder-black px-4 py-2 rounded"
+              />
+              <textarea
+                name="mensaje"
+                placeholder="Cuéntanos sobre ti"
+                value={form.mensaje}
+                onChange={handleChange}
+                rows={4}
+                required
+                className="bg-[#53aea0]/40 hover:bg-[#53aea0] border-2 border-[#53aea0] text-black placeholder-black px-4 py-2 rounded col-span-2"
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="col-span-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 rounded-full transition"
+              >
+                {loading ? "Enviando..." : "Enviar mensaje"}
+              </button>
+              {alerta && (
+                <div className="col-span-2 text-center text-sm text-black mt-2">{alerta}</div>
+              )}
+            </form>
+          </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 text-left">
-      <div className="flex items-start space-x-4">
-        <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
-        </svg>
-        <div>
-          <h4 className="font-bold text-[#07172E]">Asesoría personalizada</h4>
-          <p className="text-sm text-gray-600">Te ayudamos a encontrar la mejor solución para tu empresa.</p>
+          <div className="w-full h-64 md:h-full rounded-xl overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.181003240087!2d-99.51064482533002!3d19.274493345712173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdf54fc51a836f%3A0x5df3586846ee197!2zR8OEVFNJTUVE!5e0!3m2!1ses-419!2smx!4v1749776307139!5m2!1ses-419!2smx"              width="100%"
+              height="100%"
+              allowFullScreen={true}
+              loading="lazy"
+              className="w-full h-full border-0"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
-      <div className="flex items-start space-x-4">
-        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M5 13l4 4L19 7" />
-        </svg>
-        <div>
-          <h4 className="font-bold text-[#07172E]">Respuestas en menos de 24h</h4>
-          <p className="text-sm text-gray-600">Nos comprometemos a responderte rápido y con claridad.</p>
-        </div>
-      </div>
-      <div className="flex items-start space-x-4">
-        <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path d="M12 4v16m8-8H4" />
-        </svg>
-        <div>
-          <h4 className="font-bold text-[#07172E]">Soluciones escalables</h4>
-          <p className="text-sm text-gray-600">Nos adaptamos a tus necesidades actuales y futuras.</p>
-        </div>
-      </div>
-    </div>
-
-   
-      
-  </div>
-</section>
+    </section>
+ 
 
 
 
