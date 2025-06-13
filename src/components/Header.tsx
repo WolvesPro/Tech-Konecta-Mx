@@ -50,7 +50,7 @@ export function Header() {
         {/* Contact Info - Desktop */}
         <div className="hidden md:flex items-center space-x-6 text-sm text-gray-700 font-medium">
           <div className="flex items-center space-x-2">
-              <a href="https://wa.me/527226028263" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-green-600">
+              <a href="https://api.whatsapp.com/send?phone=527226028263&text=Hola me gustaria obtener mas información!" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-green-600">
 
             <FaWhatsapp className="text-green-500 text-lg" />
             <span>+52 7226028263</span>
@@ -90,7 +90,7 @@ export function Header() {
             <a href="/Inicio" className={linkClass('/Casos')}>Contacto</a>
           </nav>
           <div className="mt-4 flex flex-col space-y-3 text-sm text-gray-700">
-            <a href="https://wa.me/527226028263" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-green-600">
+            <a href="https://api.whatsapp.com/send?phone=527226028263&text=Hola me gustaria obtener mas información!" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-green-600">
               <FaWhatsapp className="text-lg" />
               <span>+52 722 602 8263</span>
             </a>

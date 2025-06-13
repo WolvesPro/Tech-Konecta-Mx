@@ -9,11 +9,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-0">
         <div className="text-sm leading-tight space-y-1 text-left md:text-left md:flex-1">
           <p>Contacto</p>
-          <p>+55 5555 5555</p>
+          <p>+52 7226028263</p>
           <p>Correo</p>
           <p>techkonectamx@gmail.com</p>
-          <p>Ubicación</p>
+          {/*
+            <p>Ubicación</p>
           <p>loremipsumipsumlorem</p>
+          */}
         </div>
         <div className="flex flex-col items-center md:flex-1">
           <Image
